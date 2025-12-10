@@ -11,8 +11,9 @@ import cv from "./assets/CV.pdf"
 import resumegoImage from "./assets/images/resume-go.png";
 import popsvapehubImage from "./assets/images/pops-vapehub.png";
 import eastudyImage from "./assets/images/eastudy-image.png";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaPhp, FaGitAlt, FaBootstrap, FaGithub, FaNodeJs} from 'react-icons/fa';
-import { SiTailwindcss, SiMysql } from 'react-icons/si';
+import studentManagementImage from "./assets/images/student-management-system.png";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaPhp, FaGitAlt, FaBootstrap, FaGithub, FaNodeJs, FaFacebook, FaPhone} from 'react-icons/fa';
+import { SiTailwindcss, SiMysql, SiLaragon, SiGmail} from 'react-icons/si';
 import { image } from 'framer-motion/client';
 function activeLink(link) {
   const links = document.querySelectorAll('#sidebar a');
@@ -113,10 +114,8 @@ export default function App() {
               </h2>
               
             </div>
-
-          
             <hr />
-            <ul id="sidebar" className="space-y-2 font-medium">
+            {/* <ul id="sidebar" className="space-y-2 font-medium">
               <li>
                 <a 
                   href="#home" 
@@ -166,7 +165,7 @@ export default function App() {
                   <span className="flex-1 ms-3 whitespace-nowrap">Contact</span>
                 </a>
               </li>
-            </ul>
+            </ul> */}
 
         </div>
       </aside>
@@ -175,8 +174,7 @@ export default function App() {
       <a name ="home">
        <div className="about w-500 bg-transparent" style={{backgroundColor: '#0e0b13ff', borderRadius: '15px', padding: '40px'}}>
           <h1 className='font-bold text-4xl'>Hi I am a Front End Developer</h1>
-          <p className='text-light w-120' style={{width: '690px', marginTop: '15px'}}>I’m an IT student with experience in web application development for at least 2 years since I started accepting commissions for developing web application when I was in 2nd year college up until now. I like exploring new tools and improving my skills through coding and freelance work. I’m looking forward to learning more and starting my journey in the IT industry.</p>
-
+          <p className='text-light w-120' style={{width: '690px', marginTop: '15px'}}>I’m an IT student with experience in web application development for at least 2 years since I started accepting commissions for developing web application when I was in 2nd year college up until now. I like exploring new tools and improving my skills through coding. I’m looking forward to learning more and starting my journey in the IT industry.</p>
           <br></br>
           <a href={cv} download className='cv-download'>Download my CV</a>
        </div> 
@@ -208,13 +206,13 @@ export default function App() {
           <div className="project-list grid grid-cols-5 gap-4 mt-4">
             <div className="project-item backdrop-blur-md rounded-lg" style={{backgroundColor: '#1a1a19ff', padding: '20px'}} onClick={() => setselectedProject({
               title: 'ResumeGo!',
-              description: 'ResumeGo is an innovative web application designed to simplify and modernize the resume-building process. It provides users with an intuitive, real-time interface where they can create professional resumes effortlessly. Users fill out a dynamic form section, and the changes are instantly reflected in a live preview pane, allowing them to visualize the final result as they work.',
+              description: 'ResumeGo is an innovative web application designed to simplify and modernize the resume-building process. It provides users with an intuitive, real-time interface where they can create resumes effortlessly. Users fill out a dynamic form section, and the changes are instantly reflected in a live preview pane, allowing them to visualize the final result as they work.',
               image: resumegoImage,
               link: 'https://resume-go-umber.vercel.app/',
               icons: [FaHtml5, FaCss3Alt, FaJsSquare, SiTailwindcss, FaNodeJs, FaGitAlt, , FaGithub],
             })}>
               <h2 className='font-semibold text-violet-800'>ResumeGo!</h2>
-              <p className='text-sm mt-2'>Description of Project 1</p>
+              <p className='text-sm mt-2'>ResumeGo is an innovative web application designed to simplify and...</p>
             </div>
             <div className="project-item backdrop-blur-md rounded-lg" style={{backgroundColor: '#1a1a19ff', padding: '20px'}} onClick={() => setselectedProject({
               title: "Pop's Vapehub",
@@ -225,7 +223,7 @@ export default function App() {
              
             })}>
               <h2 className='font-semibold text-violet-800'>Pop's Vapehub</h2>
-              <p className='text-sm mt-2'>Description of Project 2</p>
+              <p className='text-sm mt-2'>It's an E-commerce website that sells vape products such as e-liquids...</p>
             </div>
             <div className="project-item backdrop-blur-md rounded-lg" style={{backgroundColor: '#1a1a19ff', padding: '20px'}} onClick={() => setselectedProject({
               title: 'Eastudy',
@@ -234,6 +232,16 @@ export default function App() {
             })}>
               <h2 className='font-semibold text-violet-800'>Eastudy</h2>
               <p className='text-sm mt-2'>Description of Project 3</p>
+            </div>
+
+            <div className="project-item backdrop-blur-md rounded-lg" style={{backgroundColor: '#1a1a19ff', padding: '20px'}} onClick={() => setselectedProject({
+              title: 'Student Management System',
+              description: 'Detailed description of Eastudy project.',
+              image: studentManagementImage,
+              icons: [FaPhp, SiMysql, SiLaragon, FaCss3Alt, FaGitAlt, FaGithub],
+            })}>
+              <h2 className='font-semibold text-violet-800'>Student Management System</h2>
+              <p className='text-sm mt-2'>Description of Project 4</p>
             </div>
             
           </div>
@@ -247,8 +255,6 @@ export default function App() {
           <h1 className='font-bold text-lg skill-header'>Achievements</h1>
           <ul className='list-disc list-inside mt-4'>
             <li className='mb-2'>Dean's Lister - Achieved Dean's List recognition for academic excellence in multiple semesters.</li>
-            <li className='mb-2'>1st Place - Won 1st place in the Regional Web Development Competition 2022.</li>
-            <li className='mb-2'>Certified Front-End Developer - Earned certification from XYZ Institute for completing the Front-End Development course.</li>
           </ul>
         </div>
         </a>
@@ -273,10 +279,41 @@ export default function App() {
           </form>
         </div>
         </a>
+        <div className="footer w-full mt-5 mb-5 flex justify-center items-center" style={{backgroundColor: '#141414', borderRadius: '15px', padding: '40px'}}>
+           <div className="content ">
+              <ul className="flex gap-6">
+                <li>
+                  <a className="cursor-pointer flex items-center gap-2 text-white hover:text-blue-600 hover:scale-105 transition-transform duration-300">
+                    <FaGithub size={15} /> <span>Github</span>
+                  </a>
+                </li>
+                <li>
+                  <a className="cursor-pointer flex items-center gap-2 text-white hover:text-blue-600 hover:scale-105 transition-transform duration-300">
+                    <SiGmail size={15} /> <span>Email</span>
+                  </a>
+                </li>
+                <li>
+                  <a className="cursor-pointer flex items-center gap-2 text-white hover:text-blue-600 hover:scale-105 transition-transform duration-300">
+                    <FaFacebook size={15} /> <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a className="cursor-pointer flex items-center gap-2 text-white hover:text-blue-600 hover:scale-105 transition-transform duration-300">
+                    <FaPhone size={15} /> <span>63+ 931-857-0463</span>
+                  </a>
+                </li>
+              </ul>
+              
+              <p className="text-sm text-gray-400 mt-4 text-center">&copy; 2025 Reinel M. Gueco. All rights reserved.</p>
+            </div>
+          
+        </div>
       </main>
 
+    
     </div>
     
     
+
   );
 }
