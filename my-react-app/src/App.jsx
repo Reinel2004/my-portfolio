@@ -101,7 +101,7 @@ export default function App() {
 
     <div className="App min-h-screen text-white" style={{backgroundColor: '#100c16'}}>
       <aside id="default-sidebar" className="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 " aria-label="Sidebar">
-        <div class="h-full px-3 py-4 overflow-y-auto border-solid" style={{borderRadius: '30px 30px 30px 30px', marginTop: '20px', marginLeft: '20px', height: 'calc(100vh - 40px)', backgroundColor: '#141414'}}>
+        <div className="h-full px-3 py-4 overflow-y-auto border-solid" style={{borderRadius: '30px 30px 30px 30px', marginTop: '20px', marginLeft: '20px', height: 'calc(100vh - 40px)', backgroundColor: '#141414'}}>
           <div className="flex items-center">
               <img 
                 src={profile} 
@@ -171,14 +171,14 @@ export default function App() {
       </aside>
 
       <main className="ml-64 p-9">
-      <a name ="home">
+      
        <div className="about w-500 bg-transparent" style={{backgroundColor: '#0e0b13ff', borderRadius: '15px', padding: '40px'}}>
           <h1 className='font-bold text-4xl'>Hi I am a Front End Developer</h1>
           <p className='text-light w-120' style={{width: '690px', marginTop: '15px'}}>I’m an IT student with experience in web application development for at least 2 years since I started accepting commissions for developing web application when I was in 2nd year college up until now. I like exploring new tools and improving my skills through coding. I’m looking forward to learning more and starting my journey in the IT industry.</p>
           <br></br>
           <a href={cv} download className='cv-download'>Download my CV</a>
        </div> 
-      </a>
+    
 
       
 
